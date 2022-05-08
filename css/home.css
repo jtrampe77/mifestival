@@ -1,0 +1,447 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+    ul{
+        padding-inline-start:0px;
+    }
+
+    a{
+        text-decoration: none;
+        
+    }
+
+    p{
+        margin-block-start: 0;
+         margin-block-end: 0;
+    }
+
+
+
+
+
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* FONTS */
+@font-face {
+    font-family: 'playfair';
+    src: url('playfairdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* WIDTH SCREENS */
+   .siteNav, .galleryItems, .entertainment, .visitInfo{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+
+/* SITE NAVIGATION */
+.siteNav li{
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    margin-top: 60px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.siteNav a{
+    /* color:#00204a; */
+}
+.siteNav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.tickets:hover , .lineUp:hover{
+    background-color: #fff;
+    color: #047590;
+    box-shadow: 5px 10px 20px #a9abad;   
+}
+.siteNav li:nth-child(1){flex-grow: 1; color:#00204a;}
+.siteNav li:nth-child(2){flex-grow: 1; color:#00204a;}
+.siteNav li:nth-child(3){flex-grow: 2;}
+.siteNav li:nth-child(4), .siteNav li:nth-child(5)
+{   flex-grow: 1;
+    text-decoration: none;
+}
+.tickets, .lineUp{
+    background-color: #047590;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #fff;
+}
+.lineUp{
+    background-color: #e97300;
+}
+
+/* HEADER */
+.gallery{
+    height: 600px;
+    background-image:url(../img/headerBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.gallery h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    font-size: 100px;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+.gallery h2{
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    position: absolute;
+    top: 63%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+.gallery h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: lighter;
+    position: absolute;
+    top: 65%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+}
+.gallery img{
+    position: absolute;
+    top: 27%;
+    right: 18%;
+}
+
+/* ENTERTAINMENT */
+.entertainment{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* PLAN VISIT */
+.visit{
+    height: 1437px;
+    background-image:url(../img/HomeBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 70px;
+    
+}
+.visit h1, .visit img ~ p{
+    padding: 0px 200px;
+    margin-bottom: 35px;
+}
+.visit h4{
+    font-family: 'Playfair Display', serif;
+    font-size: 78px;
+    font-weight: lighter;
+    color: #fff;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 70px;
+}
+.visit img ~ p{
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 2;
+}
+.plans section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:25%;
+    background-color: #fff;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    padding: 50px 30px 60px 30px;
+}
+.plans{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.plans h1{
+    align-self: center;
+}
+
+.plans li:nth-child(2){
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 35px;
+    padding-bottom: 20px;
+}
+.plans li:nth-child(3){
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+.plans a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #e97300;
+    padding: 20px;
+    border-radius: 5px;
+    letter-spacing: 2px; 
+}
+.plans a:hover{
+    background-color: #fff;
+    color: #047590;
+    box-shadow: 5px 10px 20px #a9abad;   
+}
+
+/* LAST CONTENT */
+.lastContent{
+    height: 357px;
+    background-image:url(../img/lastContentBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lastContentItems{
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif;
+}
+.lastContentItems section{
+    width: 40%;
+    margin-top: 80px;
+}
+.lastContentItems p, .lastContentItems a{
+    color: #4a515a;
+    line-height: 2.5;
+}
+.lastContentItems section:nth-child(1)
+{margin-right: 80px;}
+.lastContentItems section:nth-child(2)
+{margin-right: 50px;}
+.lastContent a:hover{
+    color: #fff;
+}
+
+/* FOOTER */
+footer{
+    background-color: #000;
+    color: #4a515a;   
+    font-family: 'Barlow', sans-serif;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    margin-left: 100px;
+}
+footer div{
+    margin-right: 100px;
+}
+footer i{
+    margin-right: 20px;
+    color: #4a515a;  
+}
+footer i:hover{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
